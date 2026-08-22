@@ -4,6 +4,7 @@ import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
 import ratnaImg from './assets/images/ratna.jpg';
 import forestMainImg from './assets/images/the-forest/main.jpg';
+import heroVillaImg from './assets/images/hero-villa.jpg';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'properties'>('home');
@@ -188,7 +189,8 @@ export default function App() {
                 <img 
                   alt="Profile" 
                   className="w-7 h-7 rounded-full object-cover select-none" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfBdOAaA_giOyhY0fBVmpBh5BTFtHR1Ip_IHDs6nMGo7BCk9AEJDaV5SPK7kbGRCHYMHc8qGXgDNFSP9NgbDStOQX2sRk0ZHubG332CJUstmI7eUpvNBibrFkYaaKXZkZ1sgKlgfrw7rd467-IbB7mJHT_F6mH1nWNTbq9FxY6RsVa_erKbbE9lZXXwAskR5Fokw7rq1jFV60SrK54hctfFG-_B7scXTfACo7KhCeqo9hqKGFC7PtS"
+                  src={ratnaImg}
+                  referrerPolicy="no-referrer"
                 />
               </button>
               
@@ -349,7 +351,8 @@ export default function App() {
                     <img 
                       alt="Beautiful pool twilight modern villa" 
                       className="w-full h-full object-cover select-none" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuARRlzTRN39HPriS5cFCSx3qA559s_qxg3Vx3UogAQ3rEsn7TECmMxX3M5D0Ayhnq7pUYLOF0XtyAM10EcpFgCoYyhgT32kFi4tMZWyKH1O0BOjldTG78XNYKL3ykF0GDoFifXnYKt2w6kSUe1Og5axaBuuNPCcm0lqGD5PUySNAvBjupYqxCaSHf_a6evnipu7O3M9CgFe79owy2Ot1mVQZkPyBS2uWNbOp6AQJwTFsLmuaiAuLBTv"
+                      src={heroVillaImg}
+                      referrerPolicy="no-referrer"
                     />
                   </div>
                 </div>
