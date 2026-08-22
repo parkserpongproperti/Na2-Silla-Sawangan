@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Instagram } from 'lucide-react';
 import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
+import ratnaImg from './assets/images/ratna.jpg';
+import forestMainImg from './assets/images/the-forest/main.jpg';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'properties'>('home');
@@ -291,7 +293,7 @@ export default function App() {
                     <img 
                       alt="Ratna - Professional Property Consultant" 
                       className="w-full h-full object-cover object-top select-none" 
-                      src="/images/ratna.jpg"
+                      src={ratnaImg}
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -398,7 +400,7 @@ export default function App() {
                   >
                     <div 
                       className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: 'url("/images/the-forest/main.jpg")' }}
+                      style={{ backgroundImage: `url(${forestMainImg})` }}
                     ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
@@ -506,7 +508,7 @@ export default function App() {
                   <img 
                     alt="Ratna Property Consultant Portrait" 
                     className="w-full h-full object-cover object-top select-none" 
-                    src="/images/ratna.jpg"
+                    src={ratnaImg}
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -1037,7 +1039,7 @@ export default function App() {
             
             <div className="flex items-center gap-3 mb-4 pr-6">
               <img 
-                src="/images/ratna.jpg" 
+                src={ratnaImg} 
                 alt="Ratna" 
                 className="w-12 h-12 rounded-full object-cover object-top border-2 border-[#965F0E] shadow-xs" 
                 referrerPolicy="no-referrer"

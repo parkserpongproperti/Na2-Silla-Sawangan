@@ -1,5 +1,15 @@
 import { Property, PropertyCategory } from '../types';
 
+// Import Assets (Bundled by Vite for 100% compatibility on GitHub Pages and any subpath)
+import forestMainImg from '../assets/images/the-forest/main.jpg';
+import forestGateImg from '../assets/images/the-forest/gate.jpg';
+import forestCreekImg from '../assets/images/the-forest/creek.jpg';
+import forestPvImg from '../assets/images/the-forest/pv-type.jpg';
+import forestPcImg from '../assets/images/the-forest/pc-type.jpg';
+import forestLmImg from '../assets/images/the-forest/lm-type.jpg';
+import forestSiteplanImg from '../assets/images/the-forest/siteplan.jpg';
+import forestAccessImg from '../assets/images/the-forest/access-map.jpg';
+
 /**
  * DAFTAR KATEGORI UTAMA PROPERTI
  */
@@ -12,22 +22,6 @@ export const PROPERTY_CATEGORIES: PropertyCategory[] = [
 /**
  * =======================================================================
  * DATA SEMUA PROPERTI / UNIT SILLA SAWANGAN
- * =======================================================================
- * 
- * PANDUAN PENGISIAN / PENGUBAHAN DATA UNTUK GITHUB:
- * -----------------------------------------------------------------------
- * 1. FOTO:
- *    Simpan file foto Anda di folder: /public/images/<nama-folder>/
- *    - THE FOREST : /public/images/the-forest/main.jpg, galeri-1.jpg, dst.
- *    - SOUTH BANK : /public/images/south-bank/main.jpg, galeri-1.jpg, dst.
- *    - LAKE VISTA : /public/images/lake-vista/main.jpg, galeri-1.jpg, dst.
- * 
- * 2. SPESIFIKASI:
- *    - bedrooms  : Ubah angka jumlah kamar tidur (misal: 4)
- *    - bathrooms : Ubah angka jumlah kamar mandi (misal: 3)
- *    - floors    : Ubah angka jumlah lantai (misal: 2)
- *    - price     : Teks tampilan harga (misal: 'Rp 4.500.000.000')
- *    - priceNumeric : Angka harga (misal: 4500000000)
  * =======================================================================
  */
 
@@ -47,18 +41,18 @@ export const PROPERTIES: Property[] = [
     floors: 2,
     sqft: 149,
     yearBuilt: 2024,
-    // Foto Utama
-    image: '/images/the-forest/main.jpg',
+    // Foto Utama (Bundled Asset)
+    image: forestMainImg,
     // Galeri Lengkap The Forest (Unit Types, Gate, Creek Side, Site Plan, Lokasi)
     images: [
-      '/images/the-forest/main.jpg',
-      '/images/the-forest/gate.jpg',
-      '/images/the-forest/creek.jpg',
-      '/images/the-forest/pv-type.jpg',
-      '/images/the-forest/pc-type.jpg',
-      '/images/the-forest/lm-type.jpg',
-      '/images/the-forest/siteplan.jpg',
-      '/images/the-forest/access-map.jpg'
+      forestMainImg,
+      forestGateImg,
+      forestCreekImg,
+      forestPvImg,
+      forestPcImg,
+      forestLmImg,
+      forestSiteplanImg,
+      forestAccessImg
     ],
     features: [
       'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
