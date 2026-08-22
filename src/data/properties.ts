@@ -1,15 +1,5 @@
 import { Property, PropertyCategory } from '../types';
 
-// The Forest Images (1.jpg to 8.jpg)
-import forest1 from '../assets/images/the-forest/1.jpg';
-import forest2 from '../assets/images/the-forest/2.jpg';
-import forest3 from '../assets/images/the-forest/3.jpg';
-import forest4 from '../assets/images/the-forest/4.jpg';
-import forest5 from '../assets/images/the-forest/5.jpg';
-import forest6 from '../assets/images/the-forest/6.jpg';
-import forest7 from '../assets/images/the-forest/7.jpg';
-import forest8 from '../assets/images/the-forest/8.jpg';
-
 /**
  * DAFTAR KATEGORI UTAMA PROPERTI
  */
@@ -24,10 +14,10 @@ export const PROPERTY_CATEGORIES: PropertyCategory[] = [
  * DATA SEMUA PROPERTI / UNIT SILLA SAWANGAN
  * =======================================================================
  * 
- * PANDUAN PENAMAAN FOTO (SANGAT MUDAH DENGAN ANGKA):
- * - THE FOREST : Simpan di folder /the-forest/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
- * - SOUTH BANK : Simpan di folder /south-bank/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
- * - LAKE VISTA : Simpan di folder /lake-vista/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
+ * PANDUAN PENAMAAN FOTO DI PUBLIC (1.jpg, 2.jpg, dst):
+ * - THE FOREST : public/images/the-forest/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
+ * - SOUTH BANK : public/images/south-bank/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
+ * - LAKE VISTA : public/images/lake-vista/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
  * =======================================================================
  */
 
@@ -48,17 +38,17 @@ export const PROPERTIES: Property[] = [
     sqft: 149,
     yearBuilt: 2024,
     // Foto Utama (1.jpg)
-    image: forest1,
+    image: '/images/the-forest/1.jpg',
     // Galeri Lengkap The Forest (1.jpg sampai 8.jpg)
     images: [
-      forest1, // 1.jpg: Foto Utama Fasad
-      forest2, // 2.jpg: Gerbang Masuk
-      forest3, // 3.jpg: Fasilitas Creek & Boardwalk
-      forest4, // 4.jpg: Tipe PV (149m²)
-      forest5, // 5.jpg: Tipe PC (184m²)
-      forest6, // 6.jpg: Tipe LM (222m²)
-      forest7, // 7.jpg: Denah / Siteplan
-      forest8  // 8.jpg: Peta Akses Tol
+      '/images/the-forest/1.jpg', // 1.jpg: Foto Utama Fasad
+      '/images/the-forest/2.jpg', // 2.jpg: Gerbang Masuk
+      '/images/the-forest/3.jpg', // 3.jpg: Fasilitas Creek & Boardwalk
+      '/images/the-forest/4.jpg', // 4.jpg: Tipe PV (149m²)
+      '/images/the-forest/5.jpg', // 5.jpg: Tipe PC (184m²)
+      '/images/the-forest/6.jpg', // 6.jpg: Tipe LM (222m²)
+      '/images/the-forest/7.jpg', // 7.jpg: Denah / Siteplan
+      '/images/the-forest/8.jpg'  // 8.jpg: Peta Akses Tol
     ],
     features: [
       'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
