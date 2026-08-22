@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { Instagram } from 'lucide-react';
 import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
-import ratnaImg from './assets/images/ratna.jpg';
-import forestMainImg from './assets/images/the-forest/main.jpg';
-import heroVillaImg from './assets/images/hero-villa.jpg';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'properties'>('home');
@@ -189,7 +186,7 @@ export default function App() {
                 <img 
                   alt="Profile" 
                   className="w-7 h-7 rounded-full object-cover select-none" 
-                  src={ratnaImg}
+                  src="/images/ratna.jpg"
                   referrerPolicy="no-referrer"
                 />
               </button>
@@ -295,12 +292,12 @@ export default function App() {
                     <img 
                       alt="Ratna - Professional Property Consultant" 
                       className="w-full h-full object-cover object-top select-none" 
-                      src={ratnaImg}
+                      src="/images/ratna.jpg"
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   
-                  {/* Slate Navy Trust Badge Card - Exactly Same Width, Placed Inline (NO overlap) */}
+                  {/* Slate Navy Trust Card */}
                   <div className="bg-[#0f1c2e] p-3 sm:p-6 md:p-8 rounded-lg shadow-sm border border-gray-800 w-full">
                     <div className="flex items-center gap-2 sm:gap-4 mb-2 sm:mb-4">
                       <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-[#965F0E]/20 flex items-center justify-center shrink-0">
@@ -351,7 +348,7 @@ export default function App() {
                     <img 
                       alt="Beautiful pool twilight modern villa" 
                       className="w-full h-full object-cover select-none" 
-                      src={heroVillaImg}
+                      src="/images/hero-villa.jpg"
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -403,7 +400,7 @@ export default function App() {
                   >
                     <div 
                       className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: `url(${forestMainImg})` }}
+                      style={{ backgroundImage: 'url("/images/the-forest/main.jpg")' }}
                     ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
@@ -511,7 +508,7 @@ export default function App() {
                   <img 
                     alt="Ratna Property Consultant Portrait" 
                     className="w-full h-full object-cover object-top select-none" 
-                    src={ratnaImg}
+                    src="/images/ratna.jpg"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -1042,7 +1039,7 @@ export default function App() {
             
             <div className="flex items-center gap-3 mb-4 pr-6">
               <img 
-                src={ratnaImg} 
+                src="/images/ratna.jpg" 
                 alt="Ratna" 
                 className="w-12 h-12 rounded-full object-cover object-top border-2 border-[#965F0E] shadow-xs" 
                 referrerPolicy="no-referrer"
