@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Instagram } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
 
@@ -98,6 +99,35 @@ export default function App() {
       setContactMsg('');
       setIsContactOpen(false);
     }, 2500);
+  };
+
+  const handleShare = async (property: { title: string; location: string; price: string }) => {
+    const shareData = {
+      title: property.title,
+      text: `Cek hunian eksklusif ${property.title} di Silla Sawangan - ${property.price} (${property.location})`,
+      url: window.location.href,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (err) {
+        // User cancelled or share not allowed
+      }
+    }
+
+    // Fallback to clipboard copy
+    try {
+      await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
+      const notice = document.createElement('div');
+      notice.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#0f1c2e] text-white text-xs px-4 py-2.5 rounded shadow-lg z-50 animate-bounce';
+      notice.innerText = `Tautan & info "${property.title}" berhasil disalin ke clipboard!`;
+      document.body.appendChild(notice);
+      setTimeout(() => notice.remove(), 2500);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   const filteredProperties = PROPERTIES.filter(p => 
@@ -202,7 +232,7 @@ export default function App() {
                 <span className="material-symbols-outlined text-black text-lg">menu</span>
                 <img 
                   alt="Profile" 
-                  className="w-7 h-7 rounded-full object-cover select-none" 
+                  className="w-7 h-7 rounded-full object-cover object-top select-none" 
                   src={ratnaPhoto}
                   onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                   referrerPolicy="no-referrer"
@@ -304,7 +334,13 @@ export default function App() {
               <div className="grid grid-cols-12 gap-3 sm:gap-6 lg:gap-8 items-start w-full">
                 
                 {/* Left Side: Agent Portrait & Underneath Trust Card (Strict Width Sync & Side-by-Side) */}
-                <div className="col-span-4 flex flex-col gap-3 sm:gap-6 w-full">
+                <motion.div 
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1.0, ease: "easeOut" }}
+                  className="col-span-4 flex flex-col gap-3 sm:gap-6 w-full"
+                >
                   {/* Agent Portrait Image */}
                   <div className="w-full aspect-[4/5] rounded-lg overflow-hidden shadow-sm">
                     <img 
@@ -317,7 +353,13 @@ export default function App() {
                   </div>
                   
                   {/* Slate Navy Trust Card */}
-                  <div className="bg-[#0f1c2e] p-3 sm:p-6 md:p-8 rounded-lg shadow-sm border border-gray-800 w-full">
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }}
+                    className="bg-[#0f1c2e] p-3 sm:p-6 md:p-8 rounded-lg shadow-sm border border-gray-800 w-full"
+                  >
                     <div className="flex items-center gap-2 sm:gap-4 mb-2 sm:mb-4">
                       <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-[#965F0E]/20 flex items-center justify-center shrink-0">
                         <span className="material-symbols-outlined text-[#965F0E] text-xs sm:text-xl font-bold">real_estate_agent</span>
@@ -338,11 +380,17 @@ export default function App() {
                       <div className="flex items-center gap-0.5"><span className="material-symbols-outlined text-[#965F0E] text-[8px] sm:text-[13px] font-bold">visibility</span> Transparent</div>
                       <div className="flex items-center gap-0.5"><span className="material-symbols-outlined text-[#965F0E] text-[8px] sm:text-[13px] font-bold">favorite</span> Dedicated</div>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
                 
                 {/* Right Side: Header White Bar and Large Twilight Villa Image (Zero overlap) */}
-                <div className="col-span-8 flex flex-col w-full">
+                <motion.div 
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+                  className="col-span-8 flex flex-col w-full"
+                >
                   <div className="bg-white border border-gray-100 rounded-t-lg px-3 sm:px-6 py-2 sm:py-4 flex flex-row items-center justify-between gap-2 shadow-2xs">
                     {/* Brand Text Logo left */}
                     <div className="flex items-center gap-1 sm:gap-2">
@@ -372,14 +420,20 @@ export default function App() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                </div>
+                </motion.div>
 
               </div>
             </section>
 
             {/* CATEGORIES SECTION (THE FOREST, SOUTH BANK, LAKE VISTA) - DEDICATED CATEGORY FILTER */}
             <section className="py-10 sm:py-16 px-4 sm:px-6 max-w-[1200px] mx-auto w-full border-t border-gray-100" id="clusters">
-              <div className="grid grid-cols-12 gap-3 sm:gap-8 lg:gap-10 items-center">
+              <motion.div 
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                className="grid grid-cols-12 gap-3 sm:gap-8 lg:gap-10 items-center"
+              >
                 
                 {/* Left details narrative */}
                 <div className="col-span-12 md:col-span-4 flex flex-col justify-center">
@@ -508,7 +562,7 @@ export default function App() {
                   </div>
 
                 </div>
-              </div>
+              </motion.div>
             </section>
 
             {/* ABOUT ME SECTION (Personalized Agent Profile) */}
@@ -925,16 +979,7 @@ export default function App() {
                                 </svg>
                               </button>
                               <button 
-                                onClick={() => {
-                                  navigator.clipboard.writeText(`${property.title} at ${property.location} - Price: ${property.price}`);
-                                  // Non-blocking simulated feedback
-                                  const text = `Copied details of ${property.title}!`;
-                                  const notice = document.createElement('div');
-                                  notice.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#0f1c2e] text-white text-xs px-4 py-2.5 rounded shadow-lg z-50 animate-bounce';
-                                  notice.innerText = text;
-                                  document.body.appendChild(notice);
-                                  setTimeout(() => notice.remove(), 2500);
-                                }}
+                                onClick={() => handleShare(property)}
                                 className="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-700 hover:bg-[#965F0E] hover:text-white transition-all cursor-pointer border-none"
                                 title="Share"
                               >
