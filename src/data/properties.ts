@@ -37,27 +37,41 @@ export const PROPERTIES: Property[] = [
   // ---------------------------------------------------------------------
   {
     id: 'forest-1',
-    title: 'The Forest Sanctuary Villa',
+    title: 'The Forest Silla Sawangan',
     category: 'THE FOREST',
     location: 'Cluster The Forest, Silla Sawangan, Depok',
-    price: 'Rp 6.800.000.000',
-    priceNumeric: 6800000000,
-    bedrooms: 5,     // <--- UBAH JUMLAH KAMAR TIDUR DI SINI
-    bathrooms: 4,    // <--- UBAH JUMLAH KAMAR MANDI DI SINI
-    floors: 2,       // <--- UBAH JUMLAH LANTAI DI SINI
-    sqft: 6800,
-    yearBuilt: 2023,
-    // Foto Utama (Bisa ganti ke '/images/the-forest/main.jpg' setelah upload ke GitHub)
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    // Galeri Foto Unit
+    price: 'Mulai Rp 2.800.000.000',
+    priceNumeric: 2800000000,
+    bedrooms: 4,
+    bathrooms: 3,
+    floors: 2,
+    sqft: 149,
+    yearBuilt: 2024,
+    // Foto Utama
+    image: '/images/the-forest/main.jpg',
+    // Galeri Lengkap The Forest (Unit Types, Gate, Creek Side, Site Plan, Lokasi)
     images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'
+      '/images/the-forest/main.jpg',
+      '/images/the-forest/gate.jpg',
+      '/images/the-forest/creek.jpg',
+      '/images/the-forest/pv-type.jpg',
+      '/images/the-forest/pc-type.jpg',
+      '/images/the-forest/lm-type.jpg',
+      '/images/the-forest/siteplan.jpg',
+      '/images/the-forest/access-map.jpg'
     ],
-    description: 'Unit eksklusif di cluster The Forest dengan nuansa alam hijau asri, ceiling tinggi, sirkulasi udara optimal, serta private garden yang menyejukkan. Sangat ideal untuk kenyamanan keluarga modern.',
-    badges: ['Featured', 'The Forest']
+    features: [
+      'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
+      'PC Type (LB 184m² - 4 KT, 4 KM, 2 Carport)',
+      'LM Type (LB 222m² - 4+1 KT, 4+1+1 KM, 2 Carport)',
+      'The Gateway to Your Creation (Grand Iconic Gate)',
+      'Creek Side Living, Kayaking & Sunken Deck Promenade',
+      'Exclusive Facilities: Outdoor Gym, Basketball Court, Playground, Yoga Area, Edible Garden',
+      'Lake Series: Picnic Lawn, Herbs Garden, Sunbathing Deck, Boat Dock & Seating Pavilion',
+      'Akses Strategis: 25 Menit Serpong/Alam Sutera, 30 Menit Jakarta Selatan, 35 Menit Bandara Soekarno-Hatta'
+    ],
+    description: 'The Forest Silla Sawangan mengusung konsep hunian "The Gateway to Your Creation" dan "Creek Side Living". Menghadirkan 3 tipe unit prestisius (PV Type 149m², PC Type 184m², LM Type 222m²), kawasan asri dengan aliran sungai alami, private boardwalk, serta fasilitas rekreasi dan olahraga eksklusif.',
+    badges: ['Featured', 'The Forest', 'Creek Side Living', '3 Unit Types']
   },
 
   // ---------------------------------------------------------------------

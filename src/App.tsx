@@ -289,9 +289,10 @@ export default function App() {
                   {/* Agent Portrait Image */}
                   <div className="w-full aspect-[4/5] rounded-lg overflow-hidden shadow-sm">
                     <img 
-                      alt="Professional real estate agent portrait" 
+                      alt="Ratna - Professional Property Consultant" 
                       className="w-full h-full object-cover object-top select-none" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmwGUHblWW4VnjgQ3gVG4sbMHHDUcnlUwOEshvL_q8lObQAME6rylgQCkWgRIAh-BTcHAu2sGUFOpFGrS3jzGH0MPmoxu84l9IVRBHenmxv2_R3gdGpI8bLSi8eay0fXmjPXoVNlxp-KBqbtF0Ba_klty8bBLn_51jVhSQ2Pe9kCoCZaDP6_60lw6vycPzSfj9ai_BR4TelF9xym9a9-mbAL9H6zvbDlNPzfCU7BEABoh3HPcEzHaZ"
+                      src="/images/ratna.jpg"
+                      referrerPolicy="no-referrer"
                     />
                   </div>
                   
@@ -397,7 +398,7 @@ export default function App() {
                   >
                     <div 
                       className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80")' }}
+                      style={{ backgroundImage: 'url("/images/the-forest/main.jpg")' }}
                     ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
@@ -501,11 +502,12 @@ export default function App() {
                 </div>
                 
                 {/* Right Crop Landscape Agent Image */}
-                <div className="col-span-5 relative h-[100px] sm:h-[250px] md:h-[350px] rounded-lg overflow-hidden shadow-md">
+                <div className="col-span-5 relative h-[140px] sm:h-[280px] md:h-[380px] rounded-lg overflow-hidden shadow-md">
                   <img 
                     alt="Ratna Property Consultant Portrait" 
-                    className="w-full h-full object-cover object-center select-none" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmwGUHblWW4VnjgQ3gVG4sbMHHDUcnlUwOEshvL_q8lObQAME6rylgQCkWgRIAh-BTcHAu2sGUFOpFGrS3jzGH0MPmoxu84l9IVRBHenmxv2_R3gdGpI8bLSi8eay0fXmjPXoVNlxp-KBqbtF0Ba_klty8bBLn_51jVhSQ2Pe9kCoCZaDP6_60lw6vycPzSfj9ai_BR4TelF9xym9a9-mbAL9H6zvbDlNPzfCU7BEABoh3HPcEzHaZ"
+                    className="w-full h-full object-cover object-top select-none" 
+                    src="/images/ratna.jpg"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
 
@@ -1033,8 +1035,18 @@ export default function App() {
               <span className="material-symbols-outlined text-xl font-bold">close</span>
             </button>
             
-            <h3 className="font-headline-xl text-lg text-black mb-1 font-extrabold uppercase tracking-wider">Contact Our Experts</h3>
-            <p className="text-xs text-gray-500 mb-5 leading-relaxed">Let us guide you to the perfect location.</p>
+            <div className="flex items-center gap-3 mb-4 pr-6">
+              <img 
+                src="/images/ratna.jpg" 
+                alt="Ratna" 
+                className="w-12 h-12 rounded-full object-cover object-top border-2 border-[#965F0E] shadow-xs" 
+                referrerPolicy="no-referrer"
+              />
+              <div>
+                <h3 className="font-headline-xl text-base text-black font-extrabold uppercase tracking-wider">Konsultasi dengan Ratna</h3>
+                <p className="text-[11px] text-gray-500 font-medium">Property Consultant Silla Sawangan</p>
+              </div>
+            </div>
             
             {contactSubmitted ? (
               <div className="bg-green-50 border border-green-100 text-green-800 p-5 rounded text-center">
@@ -1188,6 +1200,21 @@ export default function App() {
                   {selectedProperty.description}
                 </p>
               </div>
+
+              {/* Cluster Features & Types Breakdown if available */}
+              {selectedProperty.features && selectedProperty.features.length > 0 && (
+                <div className="bg-amber-50/60 p-4 rounded-lg border border-amber-200/60 space-y-2">
+                  <h4 className="font-extrabold text-[10px] uppercase text-[#965F0E] tracking-widest">Pilihan Tipe & Keunggulan</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {selectedProperty.features.map((feat, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-2 text-xs text-gray-700">
+                        <span className="material-symbols-outlined text-[#965F0E] text-sm mt-0.5 shrink-0">check_circle</span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Direct WhatsApp Action Shortcut */}
               <div className="pt-2">
