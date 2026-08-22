@@ -1,5 +1,14 @@
 import { Property, PropertyCategory } from '../types';
 
+import forestMain from '../assets/images/the-forest/main.jpg';
+import forestGate from '../assets/images/the-forest/gate.jpg';
+import forestCreek from '../assets/images/the-forest/creek.jpg';
+import forestPv from '../assets/images/the-forest/pv-type.jpg';
+import forestPc from '../assets/images/the-forest/pc-type.jpg';
+import forestLm from '../assets/images/the-forest/lm-type.jpg';
+import forestSiteplan from '../assets/images/the-forest/siteplan.jpg';
+import forestAccess from '../assets/images/the-forest/access-map.jpg';
+
 /**
  * DAFTAR KATEGORI UTAMA PROPERTI
  */
@@ -12,13 +21,6 @@ export const PROPERTY_CATEGORIES: PropertyCategory[] = [
 /**
  * =======================================================================
  * DATA SEMUA PROPERTI / UNIT SILLA SAWANGAN
- * =======================================================================
- * 
- * PANDUAN PENGISIAN FOTO DI GITHUB & VERCEL:
- * Simpan file foto Anda di folder: /public/images/<nama-folder>/
- * - THE FOREST : /public/images/the-forest/main.jpg, gate.jpg, creek.jpg, dll.
- * - SOUTH BANK : /public/images/south-bank/main.jpg, dll.
- * - LAKE VISTA : /public/images/lake-vista/main.jpg, dll.
  * =======================================================================
  */
 
@@ -38,18 +40,18 @@ export const PROPERTIES: Property[] = [
     floors: 2,
     sqft: 149,
     yearBuilt: 2024,
-    // Foto Utama (Tersedia di public/images/the-forest/main.jpg)
-    image: '/images/the-forest/main.jpg',
-    // Galeri Lengkap The Forest (Tersedia di folder public/images/the-forest/)
+    // Foto Utama (Bundled via Vite)
+    image: forestMain,
+    // Galeri Lengkap The Forest (Bundled via Vite)
     images: [
-      '/images/the-forest/main.jpg',
-      '/images/the-forest/gate.jpg',
-      '/images/the-forest/creek.jpg',
-      '/images/the-forest/pv-type.jpg',
-      '/images/the-forest/pc-type.jpg',
-      '/images/the-forest/lm-type.jpg',
-      '/images/the-forest/siteplan.jpg',
-      '/images/the-forest/access-map.jpg'
+      forestMain,
+      forestGate,
+      forestCreek,
+      forestPv,
+      forestPc,
+      forestLm,
+      forestSiteplan,
+      forestAccess
     ],
     features: [
       'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',

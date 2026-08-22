@@ -3,6 +3,10 @@ import { Instagram } from 'lucide-react';
 import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
 
+import ratnaPhoto from './assets/images/ratna.jpg';
+import heroVillaPhoto from './assets/images/hero-villa.jpg';
+import theForestPhoto from './assets/images/the-forest/main.jpg';
+
 const FALLBACK_AVATAR = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80';
 const FALLBACK_VILLA = 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80';
 const FALLBACK_FOREST = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80';
@@ -199,7 +203,7 @@ export default function App() {
                 <img 
                   alt="Profile" 
                   className="w-7 h-7 rounded-full object-cover select-none" 
-                  src="/images/ratna.jpg"
+                  src={ratnaPhoto}
                   onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                   referrerPolicy="no-referrer"
                 />
@@ -306,7 +310,7 @@ export default function App() {
                     <img 
                       alt="Ratna - Professional Property Consultant" 
                       className="w-full h-full object-cover object-top select-none" 
-                      src="/images/ratna.jpg"
+                      src={ratnaPhoto}
                       onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                       referrerPolicy="no-referrer"
                     />
@@ -363,7 +367,7 @@ export default function App() {
                     <img 
                       alt="Beautiful pool twilight modern villa" 
                       className="w-full h-full object-cover select-none" 
-                      src="/images/hero-villa.jpg"
+                      src={heroVillaPhoto}
                       onError={(e) => handleImgError(e, FALLBACK_VILLA)}
                       referrerPolicy="no-referrer"
                     />
@@ -415,7 +419,7 @@ export default function App() {
                     }`}
                   >
                     <img 
-                      src="/images/the-forest/main.jpg"
+                      src={theForestPhoto}
                       alt="The Forest Cluster"
                       onError={(e) => handleImgError(e, FALLBACK_FOREST)}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -530,7 +534,7 @@ export default function App() {
                   <img 
                     alt="Ratna Property Consultant Portrait" 
                     className="w-full h-full object-cover object-top select-none" 
-                    src="/images/ratna.jpg"
+                    src={ratnaPhoto}
                     onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                     referrerPolicy="no-referrer"
                   />
@@ -1069,7 +1073,7 @@ export default function App() {
             
             <div className="flex items-center gap-3 mb-4 pr-6">
               <img 
-                src="/images/ratna.jpg" 
+                src={ratnaPhoto} 
                 alt="Ratna" 
                 onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                 className="w-12 h-12 rounded-full object-cover object-top border-2 border-[#965F0E] shadow-xs" 
