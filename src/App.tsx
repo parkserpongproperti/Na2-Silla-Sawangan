@@ -3,6 +3,19 @@ import { Instagram } from 'lucide-react';
 import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
 
+const FALLBACK_AVATAR = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80';
+const FALLBACK_VILLA = 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80';
+const FALLBACK_FOREST = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80';
+const FALLBACK_SOUTHBANK = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80';
+const FALLBACK_LAKEVISTA = 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80';
+
+const handleImgError = (e: React.SyntheticEvent<HTMLImageElement, Event>, fallbackUrl: string) => {
+  const target = e.currentTarget;
+  if (target.src !== fallbackUrl) {
+    target.src = fallbackUrl;
+  }
+};
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'properties'>('home');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
@@ -187,6 +200,7 @@ export default function App() {
                   alt="Profile" 
                   className="w-7 h-7 rounded-full object-cover select-none" 
                   src="/images/ratna.jpg"
+                  onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                   referrerPolicy="no-referrer"
                 />
               </button>
@@ -293,6 +307,7 @@ export default function App() {
                       alt="Ratna - Professional Property Consultant" 
                       className="w-full h-full object-cover object-top select-none" 
                       src="/images/ratna.jpg"
+                      onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -349,6 +364,7 @@ export default function App() {
                       alt="Beautiful pool twilight modern villa" 
                       className="w-full h-full object-cover select-none" 
                       src="/images/hero-villa.jpg"
+                      onError={(e) => handleImgError(e, FALLBACK_VILLA)}
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -398,10 +414,12 @@ export default function App() {
                         : 'border-gray-100 hover:border-[#965F0E] opacity-90 hover:opacity-100'
                     }`}
                   >
-                    <div 
-                      className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: 'url("/images/the-forest/main.jpg")' }}
-                    ></div>
+                    <img 
+                      src="/images/the-forest/main.jpg"
+                      alt="The Forest Cluster"
+                      onError={(e) => handleImgError(e, FALLBACK_FOREST)}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     {selectedCategory === 'THE FOREST' && (
@@ -430,10 +448,12 @@ export default function App() {
                         : 'border-gray-100 hover:border-[#965F0E] opacity-90 hover:opacity-100'
                     }`}
                   >
-                    <div 
-                      className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80")' }}
-                    ></div>
+                    <img 
+                      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                      alt="South Bank Cluster"
+                      onError={(e) => handleImgError(e, FALLBACK_SOUTHBANK)}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     {selectedCategory === 'SOUTH BANK' && (
@@ -462,10 +482,12 @@ export default function App() {
                         : 'border-gray-100 hover:border-[#965F0E] opacity-90 hover:opacity-100'
                     }`}
                   >
-                    <div 
-                      className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80")' }}
-                    ></div>
+                    <img 
+                      src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                      alt="Lake Vista Cluster"
+                      onError={(e) => handleImgError(e, FALLBACK_LAKEVISTA)}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     {selectedCategory === 'LAKE VISTA' && (
@@ -509,6 +531,7 @@ export default function App() {
                     alt="Ratna Property Consultant Portrait" 
                     className="w-full h-full object-cover object-top select-none" 
                     src="/images/ratna.jpg"
+                    onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -813,9 +836,11 @@ export default function App() {
                         <div className={`relative overflow-hidden shrink-0 ${
                           propertiesLayout === 'grid' ? 'w-full aspect-[16/10]' : 'w-full lg:w-[380px] xl:w-[420px] aspect-[16/10]'
                         }`}>
-                          <div 
-                            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                            style={{ backgroundImage: `url(${property.image})` }}
+                          <img 
+                            src={property.image}
+                            alt={property.title}
+                            onError={(e) => handleImgError(e, FALLBACK_FOREST)}
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                           
                           {/* Badges overlay */}
@@ -1007,7 +1032,12 @@ export default function App() {
                     }}
                     className="flex gap-4 p-2.5 bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 rounded cursor-pointer transition-all items-center group"
                   >
-                    <img src={property.image} alt={property.title} className="w-12 h-12 rounded object-cover" />
+                    <img 
+                      src={property.image} 
+                      alt={property.title} 
+                      onError={(e) => handleImgError(e, FALLBACK_FOREST)}
+                      className="w-12 h-12 rounded object-cover" 
+                    />
                     <div className="flex-grow">
                       <h4 className="text-white font-extrabold group-hover:text-[#965F0E] transition-colors text-xs uppercase">{property.title}</h4>
                       <p className="text-gray-400 text-[11px]">{property.location}</p>
@@ -1041,6 +1071,7 @@ export default function App() {
               <img 
                 src="/images/ratna.jpg" 
                 alt="Ratna" 
+                onError={(e) => handleImgError(e, FALLBACK_AVATAR)}
                 className="w-12 h-12 rounded-full object-cover object-top border-2 border-[#965F0E] shadow-xs" 
                 referrerPolicy="no-referrer"
               />
@@ -1139,7 +1170,12 @@ export default function App() {
               {/* Photo Area (Tetapkan foto di atas property information) */}
               <div className="space-y-3">
                 <div className="h-[240px] md:h-[320px] rounded-lg overflow-hidden relative shadow-inner">
-                  <img src={activeDetailPhoto || selectedProperty.image} alt={selectedProperty.title} className="w-full h-full object-cover select-none" />
+                  <img 
+                    src={activeDetailPhoto || selectedProperty.image} 
+                    alt={selectedProperty.title} 
+                    onError={(e) => handleImgError(e, FALLBACK_FOREST)}
+                    className="w-full h-full object-cover select-none" 
+                  />
                   <div className="absolute top-4 left-4 bg-[#965F0E] text-white font-extrabold px-3 py-1.5 rounded text-xs tracking-wider shadow-sm">
                     {selectedProperty.price}
                   </div>
@@ -1159,7 +1195,12 @@ export default function App() {
                           }`}
                           title={`View photo ${idx + 1}`}
                         >
-                          <img src={imgUrl} alt={`Gallery visual ${idx}`} className="w-full h-full object-cover select-none" />
+                          <img 
+                            src={imgUrl} 
+                            alt={`Gallery visual ${idx}`} 
+                            onError={(e) => handleImgError(e, FALLBACK_FOREST)}
+                            className="w-full h-full object-cover select-none" 
+                          />
                         </button>
                       );
                     })}
