@@ -3,9 +3,9 @@ import { Instagram } from 'lucide-react';
 import { Property, PropertyCategory } from './types';
 import { PROPERTIES, PROPERTY_CATEGORIES } from './data/properties';
 
-import ratnaPhoto from './assets/images/ratna.jpg';
-import heroVillaPhoto from './assets/images/hero-villa.jpg';
-import theForestPhoto from './assets/images/the-forest/main.jpg';
+import ratnaPhoto from './assets/images/profile/1.jpg';
+import heroVillaPhoto from './assets/images/hero/1.jpg';
+import theForestPhoto from './assets/images/the-forest/1.jpg';
 
 const FALLBACK_AVATAR = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80';
 const FALLBACK_VILLA = 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80';

@@ -1,13 +1,14 @@
 import { Property, PropertyCategory } from '../types';
 
-import forestMain from '../assets/images/the-forest/main.jpg';
-import forestGate from '../assets/images/the-forest/gate.jpg';
-import forestCreek from '../assets/images/the-forest/creek.jpg';
-import forestPv from '../assets/images/the-forest/pv-type.jpg';
-import forestPc from '../assets/images/the-forest/pc-type.jpg';
-import forestLm from '../assets/images/the-forest/lm-type.jpg';
-import forestSiteplan from '../assets/images/the-forest/siteplan.jpg';
-import forestAccess from '../assets/images/the-forest/access-map.jpg';
+// The Forest Images (1.jpg to 8.jpg)
+import forest1 from '../assets/images/the-forest/1.jpg';
+import forest2 from '../assets/images/the-forest/2.jpg';
+import forest3 from '../assets/images/the-forest/3.jpg';
+import forest4 from '../assets/images/the-forest/4.jpg';
+import forest5 from '../assets/images/the-forest/5.jpg';
+import forest6 from '../assets/images/the-forest/6.jpg';
+import forest7 from '../assets/images/the-forest/7.jpg';
+import forest8 from '../assets/images/the-forest/8.jpg';
 
 /**
  * DAFTAR KATEGORI UTAMA PROPERTI
@@ -21,6 +22,12 @@ export const PROPERTY_CATEGORIES: PropertyCategory[] = [
 /**
  * =======================================================================
  * DATA SEMUA PROPERTI / UNIT SILLA SAWANGAN
+ * =======================================================================
+ * 
+ * PANDUAN PENAMAAN FOTO (SANGAT MUDAH DENGAN ANGKA):
+ * - THE FOREST : Simpan di folder /the-forest/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
+ * - SOUTH BANK : Simpan di folder /south-bank/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
+ * - LAKE VISTA : Simpan di folder /lake-vista/ (1.jpg = Foto Utama, 2.jpg, 3.jpg, dst)
  * =======================================================================
  */
 
@@ -40,18 +47,18 @@ export const PROPERTIES: Property[] = [
     floors: 2,
     sqft: 149,
     yearBuilt: 2024,
-    // Foto Utama (Bundled via Vite)
-    image: forestMain,
-    // Galeri Lengkap The Forest (Bundled via Vite)
+    // Foto Utama (1.jpg)
+    image: forest1,
+    // Galeri Lengkap The Forest (1.jpg sampai 8.jpg)
     images: [
-      forestMain,
-      forestGate,
-      forestCreek,
-      forestPv,
-      forestPc,
-      forestLm,
-      forestSiteplan,
-      forestAccess
+      forest1, // 1.jpg: Foto Utama Fasad
+      forest2, // 2.jpg: Gerbang Masuk
+      forest3, // 3.jpg: Fasilitas Creek & Boardwalk
+      forest4, // 4.jpg: Tipe PV (149m²)
+      forest5, // 5.jpg: Tipe PC (184m²)
+      forest6, // 6.jpg: Tipe LM (222m²)
+      forest7, // 7.jpg: Denah / Siteplan
+      forest8  // 8.jpg: Peta Akses Tol
     ],
     features: [
       'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
@@ -77,19 +84,19 @@ export const PROPERTIES: Property[] = [
     location: 'Cluster South Bank, Silla Sawangan, Depok',
     price: 'Rp 3.500.000.000',
     priceNumeric: 3500000000,
-    bedrooms: 3,     // <--- UBAH JUMLAH KAMAR TIDUR DI SINI
-    bathrooms: 3,    // <--- UBAH JUMLAH KAMAR MANDI DI SINI
-    floors: 2,       // <--- UBAH JUMLAH LANTAI DI SINI
-    sqft: 3200,
+    bedrooms: 4,
+    bathrooms: 3,
+    floors: 2,
+    sqft: 180,
     yearBuilt: 2024,
-    // Foto Utama (Bisa ganti ke '/images/south-bank/main.jpg' setelah upload ke GitHub)
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    // Galeri Foto Unit
+    // Foto Utama: '/images/south-bank/1.jpg' (dengan cadangan online)
+    image: '/images/south-bank/1.jpg',
+    // Galeri Foto South Bank (1.jpg, 2.jpg, 3.jpg, 4.jpg)
     images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80'
+      '/images/south-bank/1.jpg',
+      '/images/south-bank/2.jpg',
+      '/images/south-bank/3.jpg',
+      '/images/south-bank/4.jpg'
     ],
     description: 'Desain minimalis kontemporer di tepi area South Bank dengan layout open-space modern, pencahayaan alami maksimal, dan akses cepat menuju fasilitas clubhouse eksklusif.',
     badges: ['Popular', 'South Bank']
@@ -103,21 +110,21 @@ export const PROPERTIES: Property[] = [
     title: 'Lake Vista Grand Waterfront',
     category: 'LAKE VISTA',
     location: 'Cluster Lake Vista, Silla Sawangan, Depok',
-    price: 'Rp 12.500.000.000',
-    priceNumeric: 12500000000,
-    bedrooms: 6,     // <--- UBAH JUMLAH KAMAR TIDUR DI SINI
-    bathrooms: 6,    // <--- UBAH JUMLAH KAMAR MANDI DI SINI
-    floors: 3,       // <--- UBAH JUMLAH LANTAI DI SINI
-    sqft: 8500,
+    price: 'Rp 4.500.000.000',
+    priceNumeric: 4500000000,
+    bedrooms: 5,
+    bathrooms: 4,
+    floors: 2,
+    sqft: 250,
     yearBuilt: 2024,
-    // Foto Utama (Bisa ganti ke '/images/lake-vista/main.jpg' setelah upload ke GitHub)
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
-    // Galeri Foto Unit
+    // Foto Utama: '/images/lake-vista/1.jpg' (dengan cadangan online)
+    image: '/images/lake-vista/1.jpg',
+    // Galeri Foto Lake Vista (1.jpg, 2.jpg, 3.jpg, 4.jpg)
     images: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'
+      '/images/lake-vista/1.jpg',
+      '/images/lake-vista/2.jpg',
+      '/images/lake-vista/3.jpg',
+      '/images/lake-vista/4.jpg'
     ],
     description: 'Mahakarya arsitektur mewah dengan pemandangan danau yang memukau di cluster Lake Vista. Dilengkapi infinity deck, master suite balkon privat menghadap danau, serta material marmer premium.',
     badges: ['Luxury Choice', 'Lake Vista']
