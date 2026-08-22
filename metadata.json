@@ -1,0 +1,6 @@
+{
+  "name": "Silla Sawangan",
+  "description": "Premium luxury real estate catalog with detailed property insights, interactive photo galleries, mortgage estimation calculators, and client inquiry protocols.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
