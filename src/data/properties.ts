@@ -46,9 +46,7 @@ export const PROPERTIES: Property[] = [
       '/images/the-forest/3.jpg', // 3.jpg: Fasilitas Creek & Boardwalk
       '/images/the-forest/4.jpg', // 4.jpg: Tipe PV (149m²)
       '/images/the-forest/5.jpg', // 5.jpg: Tipe PC (184m²)
-      '/images/the-forest/6.jpg', // 6.jpg: Tipe LM (222m²)
-      '/images/the-forest/7.jpg', // 7.jpg: Denah / Siteplan
-      '/images/the-forest/8.jpg'  // 8.jpg: Peta Akses Tol
+
     ],
     features: [
       'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
