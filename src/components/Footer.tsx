@@ -8,9 +8,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
         {/* Centered logo icon */}
         <div className="flex flex-col items-center justify-center space-y-3">
-          <div className="w-12 h-12 bg-white/5 border border-white/10 text-[#B37B24] flex items-center justify-center rounded-xl shadow-inner">
-            <Landmark className="w-6 h-6" />
-          </div>
+        <div className="w-12 h-12 bg-white/5 border border-white/10 text-[#B37B24] flex items-center justify-center rounded-xl shadow-inner overflow-hidden relative">
+  <img 
+    src="/images/logo/logo.png" 
+    alt="Shila Sawangan Logo" 
+    className="w-full h-full object-contain p-1.5"
+    onError={(e) => {
+      e.currentTarget.style.display = 'none';
+      const fallback = e.currentTarget.parentElement?.querySelector('.logo-fallback-footer') as HTMLElement;
+      if (fallback) fallback.style.display = 'flex';
+    }}
+  />
+  <div className="logo-fallback-footer hidden w-full h-full items-center justify-center">
+    <Landmark className="w-6 h-6" />
+  </div>
+</div>
           <div>
             <span className="font-display-lg text-lg font-bold tracking-widest uppercase block text-white">
               HOMELAND
