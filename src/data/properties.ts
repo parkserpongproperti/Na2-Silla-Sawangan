@@ -30,8 +30,8 @@ export const PROPERTIES: Property[] = [
     title: 'The Forest SHILA SAWANGAN',
     category: 'THE FOREST',
     location: 'Cluster The Forest, SHILA SAWANGAN, Depok',
-    price: 'Mulai Rp 2.800.000.000',
-    priceNumeric: 2800000000,
+    price: 'Mulai Rp 2.995.000.000',
+    priceNumeric: 2995000000,
     bedrooms: 4,
     bathrooms: 3,
     floors: 2,
@@ -48,16 +48,7 @@ export const PROPERTIES: Property[] = [
       '/images/the-forest/5.jpg', // 5.jpg: Tipe PC (184m²)
 
     ],
-    features: [
-      'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
-      'PC Type (LB 184m² - 4 KT, 4 KM, 2 Carport)',
-      'LM Type (LB 222m² - 4+1 KT, 4+1+1 KM, 2 Carport)',
-      'The Gateway to Your Creation (Grand Iconic Gate)',
-      'Creek Side Living, Kayaking & Sunken Deck Promenade',
-      'Exclusive Facilities: Outdoor Gym, Basketball Court, Playground, Yoga Area, Edible Garden',
-      'Lake Series: Picnic Lawn, Herbs Garden, Sunbathing Deck, Boat Dock & Seating Pavilion',
-      'Akses Strategis: 25 Menit Serpong/Alam Sutera, 30 Menit Jakarta Selatan, 35 Menit Bandara Soekarno-Hatta'
-    ],
+   
     description: 'The Forest SHILA SAWANGAN mengusung konsep hunian "The Gateway to Your Creation" dan "Creek Side Living". Menghadirkan 3 tipe unit prestisius (PV Type 149m², PC Type 184m², LM Type 222m²), kawasan asri dengan aliran sungai alami, private boardwalk, serta fasilitas rekreasi dan olahraga eksklusif.',
     badges: ['Featured', 'The Forest', 'Creek Side Living', '3 Unit Types']
   },
