@@ -27,7 +27,7 @@ export default function Header({ favoritesCount }: HeaderProps) {
   </div>
        </div>
             <h1 className="text-base sm:text-lg font-extrabold text-[#0E1726] tracking-widest uppercase">
-              Homeland
+              Silla Sawangan
             </h1>
             <p className="text-[10px] text-neutral-400 font-semibold tracking-wider uppercase -mt-0.5">
               Real Estate
