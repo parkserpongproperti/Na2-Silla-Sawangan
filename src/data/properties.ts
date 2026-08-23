@@ -61,8 +61,8 @@ export const PROPERTIES: Property[] = [
     title: 'South Bank Premium Residence',
     category: 'SOUTH BANK',
     location: 'Cluster South Bank, SHILA SAWANGAN, Depok',
-    price: 'Rp 3.500.000.000',
-    priceNumeric: 3500000000,
+    price: 'Rp 2.990.000.000',
+    priceNumeric: 2990000000,
     bedrooms: 4,
     bathrooms: 3,
     floors: 2,
@@ -89,8 +89,8 @@ export const PROPERTIES: Property[] = [
     title: 'Lake Vista Tudor Type',
     category: 'LAKE VISTA',
     location: 'Cluster Lake Vista, SHILA SAWANGAN, Depok',
-    price: 'Mulai Rp 3.800.000.000',
-    priceNumeric: 3800000000,
+    price: 'Mulai Rp 2.642.000.000',
+    priceNumeric: 2642000000,
     bedrooms: 4,
     bathrooms: 3,
     floors: 2,
@@ -143,10 +143,10 @@ export const PROPERTIES: Property[] = [
     title: 'Lake Vista Pavilion Type',
     category: 'LAKE VISTA',
     location: 'Cluster Lake Vista, SHILA SAWANGAN, Depok',
-    price: 'Mulai Rp 4.900.000.000',
-    priceNumeric: 4900000000,
-    bedrooms: 5,
-    bathrooms: 5,
+    price: 'Mulai Rp 2.357.000.000',
+    priceNumeric: 2357000000,
+    bedrooms: 4,
+    bathrooms: 3,
     floors: 3,
     sqft: 250,
     yearBuilt: 2024,
@@ -156,12 +156,7 @@ export const PROPERTIES: Property[] = [
       '/images/lake-vista/3.jpg',
       '/images/lake-vista/4.jpg'
     ],
-    features: [
-      'Pavilion Type (LB 250m² - 5 KT, 5 KM, 2-3 Carport)',
-      'Exclusive 3-Story Waterfront Living with Rooftop Terrace',
-      'Private Dock Access & Panoramic Lake View',
-      'Master Suite with Walk-In Closet & En-Suite Spa Bathroom'
-    ],
+    
     description: 'Lake Vista Pavilion adalah tipe hunian tertinggi dan paling prestisius di cluster Lake Vista. Menawarkan 3 lantai kemewahan dengan rooftop deck pribadi untuk menikmati panorama danau secara langsung.',
     badges: ['Lake Vista', 'Pavilion Type', 'Signature Collection']
   }
