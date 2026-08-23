@@ -11,13 +11,20 @@ export default function Header({ favoritesCount }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-[#0E1726] text-[#B37B24] flex items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md">
-            <Landmark className="w-5 h-5" />
-          </div>
-          <div>
+     <div className="w-10 h-10 bg-[#0E1726] text-[#B37B24] flex items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md overflow-hidden relative">
+  <img 
+    src="/images/logo/logo.png" 
+    alt="Shila Sawangan Logo" 
+    className="w-full h-full object-contain p-1"
+    onError={(e) => {
+      e.currentTarget.style.display = 'none';
+      const fallback = e.currentTarget.parentElement?.querySelector('.logo-fallback') as HTMLElement;
+      if (fallback) fallback.style.display = 'flex';
+    }}
+  />
+  <div className="logo-fallback hidden w-full h-full items-center justify-center">
+    <Landmark className="w-5 h-5" />
+  </div>
             <h1 className="text-base sm:text-lg font-extrabold text-[#0E1726] tracking-widest uppercase">
               Homeland
             </h1>
