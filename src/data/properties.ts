@@ -75,7 +75,9 @@ export const PROPERTIES: Property[] = [
       '/images/south-bank/1.jpg',
       '/images/south-bank/2.jpg',
       '/images/south-bank/3.jpg',
-      '/images/south-bank/4.jpg'
+      '/images/south-bank/4.jpg',
+      '/images/south-bank/5.jpg',
+      '/images/south-bank/6.jpg'
     ],
     description: 'Desain minimalis kontemporer di tepi area South Bank dengan layout open-space modern, pencahayaan alami maksimal, dan akses cepat menuju fasilitas clubhouse eksklusif.',
     badges: ['Popular', 'South Bank']
@@ -99,8 +101,11 @@ export const PROPERTIES: Property[] = [
     image: '/images/lake-vista/tudor/1.jpg',
     images: [
       '/images/lake-vista/tudor/1.jpg',
-      '/images/lake-vista/1.jpg',
-      '/images/lake-vista/2.jpg'
+      '/images/lake-vista/tudor/2.jpg',
+      '/images/lake-vista/tudor/3.jpg',
+      '/images/lake-vista/tudor/4.jpg',
+      '/images/lake-vista/tudor/5.jpg',
+      '/images/lake-vista/tudor/6.jpg'
     ],
     
     description: 'Lake Vista Tudor mengusung arsitektur klasik modern bergaya Inggris dengan sentuhan elegan di tepi danau. Menawarkan kenyamanan ruang keluarga terbuka dan pemandangan hijau yang menenangkan.',
@@ -121,8 +126,12 @@ export const PROPERTIES: Property[] = [
     image: '/images/lake-vista/portico/1.jpg',
     images: [
       '/images/lake-vista/portico/1.jpg',
-      '/images/lake-vista/2.jpg',
-      '/images/lake-vista/3.jpg'
+      '/images/lake-vista/portico/2.jpg',
+      '/images/lake-vista/portico/3.jpg',
+      '/images/lake-vista/portico/4.jpg',
+      '/images/lake-vista/portico/5.jpg',
+      '/images/lake-vista/portico/6.jpg'
+      
     ],
    
     description: 'Lake Vista Portico menghadirkan fasad megah dengan pilar-pilar elegan dan teras luas. Dirancang khusus bagi Anda yang mendambakan kemewahan hunian tepi danau dengan sirkulasi udara optimal.',
@@ -143,8 +152,12 @@ export const PROPERTIES: Property[] = [
     image: '/images/lake-vista/pavilion/1.jpg',
     images: [
       '/images/lake-vista/pavilion/1.jpg',
-      '/images/lake-vista/3.jpg',
-      '/images/lake-vista/4.jpg'
+      '/images/lake-vista/pavilion/2.jpg',
+      '/images/lake-vista/pavilion/3.jpg',
+      '/images/lake-vista/pavilion/4.jpg',
+      '/images/lake-vista/pavilion/5.jpg',
+      '/images/lake-vista/pavilion/6.jpg'
+     
     ],
     
     description: 'Lake Vista Pavilion adalah tipe hunian tertinggi dan paling prestisius di cluster Lake Vista. Menawarkan 2 lantai kemewahan dengan balkon deck pribadi untuk menikmati panorama danau secara langsung.',
