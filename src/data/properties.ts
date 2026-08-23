@@ -76,8 +76,7 @@ export const PROPERTIES: Property[] = [
       '/images/south-bank/2.jpg',
       '/images/south-bank/3.jpg',
       '/images/south-bank/4.jpg',
-      '/images/south-bank/5.jpg',
-      '/images/south-bank/6.jpg'
+      '/images/south-bank/5.jpg'
     ],
     description: 'Desain minimalis kontemporer di tepi area South Bank dengan layout open-space modern, pencahayaan alami maksimal, dan akses cepat menuju fasilitas clubhouse eksklusif.',
     badges: ['Popular', 'South Bank']
@@ -155,8 +154,7 @@ export const PROPERTIES: Property[] = [
       '/images/lake-vista/pavilion/2.jpg',
       '/images/lake-vista/pavilion/3.jpg',
       '/images/lake-vista/pavilion/4.jpg',
-      '/images/lake-vista/pavilion/5.jpg',
-      '/images/lake-vista/pavilion/6.jpg'
+      '/images/lake-vista/pavilion/5.jpg'
      
     ],
     
