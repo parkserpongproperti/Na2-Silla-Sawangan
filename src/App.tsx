@@ -49,7 +49,7 @@ export default function App() {
   const [inquirySubmitted, setInquirySubmitted] = useState(false);
 
   const [contactName, setContactName] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
+  const [contactPhone, setContactPhone] = useState('');
   const [contactMsg, setContactMsg] = useState('');
   const [contactSubmitted, setContactSubmitted] = useState(false);
 
@@ -90,21 +90,23 @@ export default function App() {
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!contactName || !contactEmail) return;
+    if (!contactName || !contactPhone) return;
+    const text = encodeURIComponent(`Halo Kak Ratna, saya ${contactName} (No. Telp/WA: ${contactPhone}). ${contactMsg ? `Pesan: ${contactMsg}` : 'Mohon informasi lebih lanjut mengenai properti di SHILA SAWANGAN.'}`);
+    window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
     setContactSubmitted(true);
     setTimeout(() => {
       setContactSubmitted(false);
       setContactName('');
-      setContactEmail('');
+      setContactPhone('');
       setContactMsg('');
       setIsContactOpen(false);
-    }, 2500);
+    }, 2000);
   };
 
   const handleShare = async (property: { title: string; location: string; price: string }) => {
     const shareData = {
       title: property.title,
-      text: `Cek hunian eksklusif ${property.title} di Silla Sawangan - ${property.price} (${property.location})`,
+      text: `Cek hunian eksklusif ${property.title} di SHILA SAWANGAN - ${property.price} (${property.location})`,
       url: window.location.href,
     };
 
@@ -154,11 +156,11 @@ export default function App() {
               S
             </div>
             <div className="flex items-center gap-1">
-              <span className="font-bold tracking-[0.2em] text-[13px] text-black font-display-lg uppercase">
-                SILLA
+              <span className="font-bold tracking-[0.05em] text-[14px] text-black font-display-lg">
+                Shila
               </span>
-              <span className="font-extrabold tracking-[0.1em] text-[13px] text-[#965F0E] font-display-lg uppercase">
-                SAWANGAN
+              <span className="font-extrabold tracking-[0.05em] text-[14px] text-[#965F0E] font-display-lg">
+                Sawangan
               </span>
             </div>
           </button>
@@ -394,7 +396,7 @@ export default function App() {
                   <div className="bg-white border border-gray-100 rounded-t-lg px-3 sm:px-6 py-2 sm:py-4 flex flex-row items-center justify-between gap-2 shadow-2xs">
                     {/* Brand Text Logo left */}
                     <div className="flex items-center gap-1 sm:gap-2">
-                      <span className="font-display-lg text-[8px] sm:text-[11px] md:text-[13px] tracking-[0.15em] sm:tracking-[0.25em] font-extrabold text-black uppercase">SILLA</span>
+                      <span className="font-display-lg text-[8px] sm:text-[11px] md:text-[13px] tracking-[0.15em] sm:tracking-[0.25em] font-extrabold text-black uppercase">SHILA</span>
                       <span className="text-[6px] sm:text-[8px] md:text-[9px] uppercase tracking-[0.1em] sm:tracking-[0.15em] text-gray-400 font-bold border-l border-gray-200 pl-1 sm:pl-2">SAWANGAN</span>
                     </div>
                     {/* Gold Explore Properties button right */}
@@ -437,8 +439,8 @@ export default function App() {
                 
                 {/* Left details narrative */}
                 <div className="col-span-12 md:col-span-4 flex flex-col justify-center">
-                  <h2 className="text-black mb-3 sm:mb-5 font-extrabold uppercase text-base sm:text-2xl lg:text-[32px] leading-tight sm:leading-snug">
-                    Pilihan Kategori <br className="hidden sm:block" /> Silla Sawangan
+                  <h2 className="text-black mb-3 sm:mb-5 font-bold text-base sm:text-2xl lg:text-[32px] leading-tight sm:leading-snug">
+                    Pilihan Kategori <br className="hidden sm:block" /> Shila Sawangan
                   </h2>
 
                   <div className="flex items-center gap-2">
@@ -576,7 +578,7 @@ export default function App() {
                     About Me
                   </h2>
                   <p className="font-body-md text-gray-500 mb-1.5 sm:mb-4 text-[7px] sm:text-[13px] md:text-sm leading-relaxed">
-                    Halo, saya Ratna, konsultan properti profesional dan terpercaya dengan pengalaman lebih dari satu dekade dalam membantu setiap klien menemukan hunian idaman di kawasan strategis Silla Sawangan.
+                    Halo, saya Ratna, konsultan properti profesional dan terpercaya dengan pengalaman lebih dari satu dekade dalam membantu setiap klien menemukan hunian idaman di kawasan strategis SHILA SAWANGAN.
                   </p>
                   <p className="font-body-md text-gray-500 text-[7px] sm:text-[13px] md:text-sm leading-relaxed">
                     Saya berkomitmen memberikan pendampingan personal dari awal konsultasi, pemilihan unit terbaik, simulasi KPR, hingga serah terima kunci dengan proses yang transparan, aman, dan nyaman.
@@ -621,7 +623,7 @@ export default function App() {
             <section className="bg-gray-50/50 relative py-12 lg:py-16 overflow-hidden border-b border-gray-100">
               <div className="max-w-[1200px] mx-auto px-6 w-full relative z-10">
                 <div className="flex flex-col items-center text-center mb-8">
-                  <span className="text-[10px] tracking-[0.25em] text-gray-400 font-bold uppercase mb-1">SILLA SAWANGAN CATALOG</span>
+                  <span className="text-[10px] tracking-[0.25em] text-gray-400 font-bold uppercase mb-1">SHILA SAWANGAN CATALOG</span>
                   <h1 className="font-display-lg text-black uppercase text-2xl sm:text-3xl lg:text-[38px] font-extrabold leading-tight tracking-tight mb-2">Discover Your Perfect Home</h1>
                   <p className="font-body-md text-gray-500 max-w-2xl text-[11px] sm:text-xs">Explore our curated selection of premium properties. Filter by location, type, and price to find exactly what you're looking for.</p>
                 </div>
@@ -652,7 +654,7 @@ export default function App() {
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 pb-4 border-b border-gray-100">
                 <div className="flex flex-col gap-1">
                   <h2 className="text-xl font-extrabold text-black uppercase tracking-tight">
-                    {selectedCategory === 'ALL' ? 'Semua Properti Silla' : `Kategori: ${selectedCategory}`}
+                    {selectedCategory === 'ALL' ? 'Semua Properti Shila' : `Kategori: ${selectedCategory}`}
                   </h2>
                   <p className="font-body-md text-gray-400 text-xs">Discover our curated properties currently on the market.</p>
                 </div>
@@ -968,7 +970,7 @@ export default function App() {
                             <div className="flex gap-2">
                               <button 
                                 onClick={() => {
-                                  const text = encodeURIComponent(`Halo Silla Sawangan, saya tertarik dengan properti "${property.title}" (${property.price}) di ${property.location}. Mohon informasi lebih lanjut.`);
+                                  const text = encodeURIComponent(`Halo SHILA SAWANGAN, saya tertarik dengan properti "${property.title}" (${property.price}) di ${property.location}. Mohon informasi lebih lanjut.`);
                                   window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
                                 }}
                                 className="w-9 h-9 flex items-center justify-center text-[#25D366] hover:scale-110 transition-all cursor-pointer border-none bg-transparent"
@@ -1034,7 +1036,7 @@ export default function App() {
             <div className="w-full h-[1px] bg-white/10"></div>
             
             <p className="font-label-bold text-gray-400 text-[10px] tracking-widest text-center uppercase font-bold">
-              © 2026 SILLA SAWANGAN. ALL RIGHTS RESERVED.
+              © 2026 SHILA SAWANGAN. ALL RIGHTS RESERVED.
             </p>
           </div>
         </div>
@@ -1126,7 +1128,7 @@ export default function App() {
               />
               <div>
                 <h3 className="font-headline-xl text-base text-black font-extrabold uppercase tracking-wider">Konsultasi dengan Ratna</h3>
-                <p className="text-[11px] text-gray-500 font-medium">Property Consultant Silla Sawangan</p>
+                <p className="text-[11px] text-gray-500 font-medium">Property Consultant SHILA SAWANGAN</p>
               </div>
             </div>
             
@@ -1150,14 +1152,14 @@ export default function App() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-700 uppercase tracking-widest mb-1">Email *</label>
+                  <label className="block text-[10px] font-bold text-gray-700 uppercase tracking-widest mb-1">Nomor Telepon / WhatsApp *</label>
                   <input 
-                    type="email" 
+                    type="tel" 
                     required 
-                    value={contactEmail}
-                    onChange={(e) => setContactEmail(e.target.value)}
-                    placeholder="name@example.com" 
-                    className="w-full border border-gray-200 rounded px-3.5 py-2 text-xs focus:outline-none focus:border-[#965F0E] transition-all"
+                    value={contactPhone}
+                    onChange={(e) => setContactPhone(e.target.value)}
+                    placeholder="081234567890" 
+                    className="w-full border border-gray-200 rounded px-3.5 py-2 text-xs focus:outline-none focus:border-[#25D366] transition-all"
                   />
                 </div>
                 <div>
@@ -1167,14 +1169,17 @@ export default function App() {
                     value={contactMsg}
                     onChange={(e) => setContactMsg(e.target.value)}
                     placeholder="Tell us about your requirements..." 
-                    className="w-full border border-gray-200 rounded px-3.5 py-2 text-xs focus:outline-none focus:border-[#965F0E] transition-all"
+                    className="w-full border border-gray-200 rounded px-3.5 py-2 text-xs focus:outline-none focus:border-[#25D366] transition-all"
                   ></textarea>
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full bg-[#965F0E] hover:bg-[#804f0b] text-white py-2.5 px-4 rounded text-xs uppercase font-extrabold tracking-widest transition-all cursor-pointer shadow-sm"
+                  className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white py-2.5 px-4 rounded text-xs uppercase font-extrabold tracking-widest transition-all cursor-pointer shadow-sm flex items-center justify-center gap-2"
                 >
-                  SEND MESSAGE
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.416 1.452 5.518 0 10.007-4.485 10.01-10.004.002-2.674-1.033-5.188-2.915-7.072C17.271 1.644 14.764.609 12.01.608 6.491.608 2.003 5.093 2.001 10.613c-.001 1.93.498 3.81 1.444 5.416L2.392 20.3l4.255-1.146zm11.396-8.21c-.32-.16-1.89-.933-2.185-1.042-.295-.11-.51-.16-.724.162-.215.32-.83.162-1.015 1.23-.185.215-.37.245-.69.085-.32-.16-1.348-.497-2.566-1.585-.948-.846-1.587-1.89-1.773-2.21-.185-.32-.02-.493.14-.652.145-.143.32-.37.48-.556.16-.186.214-.32.32-.534.11-.214.054-.4-.027-.56-.08-.16-.724-1.744-.993-2.39-.263-.632-.53-.547-.724-.556-.186-.01-.4-.01-.615-.01-.215 0-.565.08-.86.4-.295.32-1.13 1.104-1.13 2.693 0 1.59 1.157 3.12 1.317 3.33.162.215 2.277 3.478 5.517 4.88.77.333 1.37.532 1.838.68.773.245 1.478.21 2.034.127.62-.093 1.89-.773 2.156-1.48.265-.705.265-1.31.186-1.432-.08-.122-.295-.215-.615-.375z"/>
+                  </svg>
+                  <span>KIRIM VIA WHATSAPP</span>
                 </button>
               </form>
             )}
@@ -1312,7 +1317,7 @@ export default function App() {
               <div className="pt-2">
                 <button 
                   onClick={() => {
-                    const text = encodeURIComponent(`Halo Kak Ratna, saya tertarik dengan properti "${selectedProperty.title}" (${selectedProperty.price}) di ${selectedProperty.location}. Mohon informasi lebih lanjut.`);
+                    const text = encodeURIComponent(`Halo Kak Na², saya tertarik dengan properti "${selectedProperty.title}" (${selectedProperty.price}) di ${selectedProperty.location}. Mohon informasi lebih lanjut.`);
                     window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
                   }}
                   className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white py-3 px-6 rounded-lg flex items-center justify-center gap-2.5 text-xs font-extrabold uppercase tracking-widest transition-all cursor-pointer shadow-md hover:scale-[1.01] duration-150"
@@ -1320,7 +1325,7 @@ export default function App() {
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.416 1.452 5.518 0 10.007-4.485 10.01-10.004.002-2.674-1.033-5.188-2.915-7.072C17.271 1.644 14.764.609 12.01.608 6.491.608 2.003 5.093 2.001 10.613c-.001 1.93.498 3.81 1.444 5.416L2.392 20.3l4.255-1.146zm11.396-8.21c-.32-.16-1.89-.933-2.185-1.042-.295-.11-.51-.16-.724.162-.215.32-.83.162-1.015 1.23-.185.215-.37.245-.69.085-.32-.16-1.348-.497-2.566-1.585-.948-.846-1.587-1.89-1.773-2.21-.185-.32-.02-.493.14-.652.145-.143.32-.37.48-.556.16-.186.214-.32.32-.534.11-.214.054-.4-.027-.56-.08-.16-.724-1.744-.993-2.39-.263-.632-.53-.547-.724-.556-.186-.01-.4-.01-.615-.01-.215 0-.565.08-.86.4-.295.32-1.13 1.104-1.13 2.693 0 1.59 1.157 3.12 1.317 3.33.162.215 2.277 3.478 5.517 4.88.77.333 1.37.532 1.838.68.773.245 1.478.21 2.034.127.62-.093 1.89-.773 2.156-1.48.265-.705.265-1.31.186-1.432-.08-.122-.295-.215-.615-.375z"/>
                   </svg>
-                  <span>Tanya Ratna</span>
+                  <span>tanya Na<sup>2</sup></span>
                 </button>
               </div>
             </div>
@@ -1328,6 +1333,36 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* FLOATING WHATSAPP BUTTON WITH POPUP MESSAGE */}
+      <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3 group">
+        {/* Chat Bubble Prompt */}
+        <div className="bg-white text-gray-800 px-4 py-2.5 rounded-xl shadow-xl border border-gray-100 hidden sm:flex items-center gap-2 max-w-[260px] relative">
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-ping shrink-0"></div>
+          <div>
+            <p className="text-[11px] font-extrabold text-black uppercase tracking-tight leading-tight">Halo! Mau info Shila Sawangan?</p>
+            <p className="text-[10px] text-gray-500">Yuk ngobrol dengan Kak Na² ✨</p>
+          </div>
+          {/* Arrow pointing right */}
+          <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white border-r border-t border-gray-100 rotate-45"></div>
+        </div>
+
+        {/* WhatsApp Floating Button */}
+        <button
+          onClick={() => {
+            const text = encodeURIComponent("Halo Kak Na², saya tertarik ingin mendapatkan informasi lengkap dan penawaran terbaik mengenai properti di SHILA SAWANGAN. Mohon bantuannya.");
+            window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
+          }}
+          className="w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-200 cursor-pointer relative group-hover:rotate-6"
+          aria-label="Chat WhatsApp Kak Na2"
+        >
+          <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.416 1.452 5.518 0 10.007-4.485 10.01-10.004.002-2.674-1.033-5.188-2.915-7.072C17.271 1.644 14.764.609 12.01.608 6.491.608 2.003 5.093 2.001 10.613c-.001 1.93.498 3.81 1.444 5.416L2.392 20.3l4.255-1.146zm11.396-8.21c-.32-.16-1.89-.933-2.185-1.042-.295-.11-.51-.16-.724.162-.215.32-.83.162-1.015 1.23-.185.215-.37.245-.69.085-.32-.16-1.348-.497-2.566-1.585-.948-.846-1.587-1.89-1.773-2.21-.185-.32-.02-.493.14-.652.145-.143.32-.37.48-.556.16-.186.214-.32.32-.534.11-.214.054-.4-.027-.56-.08-.16-.724-1.744-.993-2.39-.263-.632-.53-.547-.724-.556-.186-.01-.4-.01-.615-.01-.215 0-.565.08-.86.4-.295.32-1.13 1.104-1.13 2.693 0 1.59 1.157 3.12 1.317 3.33.162.215 2.277 3.478 5.517 4.88.77.333 1.37.532 1.838.68.773.245 1.478.21 2.034.127.62-.093 1.89-.773 2.156-1.48.265-.705.265-1.31.186-1.432-.08-.122-.295-.215-.615-.375z"/>
+          </svg>
+          {/* Online badge */}
+          <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full"></span>
+        </button>
+      </div>
 
     </div>
   );

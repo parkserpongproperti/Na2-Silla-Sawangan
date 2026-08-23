@@ -27,9 +27,9 @@ export const PROPERTIES: Property[] = [
   // ---------------------------------------------------------------------
   {
     id: 'forest-1',
-    title: 'The Forest Silla Sawangan',
+    title: 'The Forest SHILA SAWANGAN',
     category: 'THE FOREST',
-    location: 'Cluster The Forest, Silla Sawangan, Depok',
+    location: 'Cluster The Forest, SHILA SAWANGAN, Depok',
     price: 'Mulai Rp 2.800.000.000',
     priceNumeric: 2800000000,
     bedrooms: 4,
@@ -60,7 +60,7 @@ export const PROPERTIES: Property[] = [
       'Lake Series: Picnic Lawn, Herbs Garden, Sunbathing Deck, Boat Dock & Seating Pavilion',
       'Akses Strategis: 25 Menit Serpong/Alam Sutera, 30 Menit Jakarta Selatan, 35 Menit Bandara Soekarno-Hatta'
     ],
-    description: 'The Forest Silla Sawangan mengusung konsep hunian "The Gateway to Your Creation" dan "Creek Side Living". Menghadirkan 3 tipe unit prestisius (PV Type 149m², PC Type 184m², LM Type 222m²), kawasan asri dengan aliran sungai alami, private boardwalk, serta fasilitas rekreasi dan olahraga eksklusif.',
+    description: 'The Forest SHILA SAWANGAN mengusung konsep hunian "The Gateway to Your Creation" dan "Creek Side Living". Menghadirkan 3 tipe unit prestisius (PV Type 149m², PC Type 184m², LM Type 222m²), kawasan asri dengan aliran sungai alami, private boardwalk, serta fasilitas rekreasi dan olahraga eksklusif.',
     badges: ['Featured', 'The Forest', 'Creek Side Living', '3 Unit Types']
   },
 
@@ -71,7 +71,7 @@ export const PROPERTIES: Property[] = [
     id: 'southbank-1',
     title: 'South Bank Premium Residence',
     category: 'SOUTH BANK',
-    location: 'Cluster South Bank, Silla Sawangan, Depok',
+    location: 'Cluster South Bank, SHILA SAWANGAN, Depok',
     price: 'Rp 3.500.000.000',
     priceNumeric: 3500000000,
     bedrooms: 4,
@@ -93,30 +93,87 @@ export const PROPERTIES: Property[] = [
   },
 
   // ---------------------------------------------------------------------
-  // 3. KATEGORI: LAKE VISTA
+  // 3. KATEGORI: LAKE VISTA (TUDOR, PORTICO, PAVILION)
   // ---------------------------------------------------------------------
   {
-    id: 'lakevista-1',
-    title: 'Lake Vista Grand Waterfront',
+    id: 'lakevista-tudor',
+    title: 'Lake Vista Tudor Type',
     category: 'LAKE VISTA',
-    location: 'Cluster Lake Vista, Silla Sawangan, Depok',
-    price: 'Rp 4.500.000.000',
-    priceNumeric: 4500000000,
-    bedrooms: 5,
+    location: 'Cluster Lake Vista, SHILA SAWANGAN, Depok',
+    price: 'Mulai Rp 3.800.000.000',
+    priceNumeric: 3800000000,
+    bedrooms: 4,
+    bathrooms: 3,
+    floors: 2,
+    sqft: 165,
+    yearBuilt: 2024,
+    image: '/images/lake-vista/tudor/1.jpg',
+    images: [
+      '/images/lake-vista/tudor/1.jpg',
+      '/images/lake-vista/1.jpg',
+      '/images/lake-vista/2.jpg'
+    ],
+    features: [
+      'Tudor Type (LB 165m² - 4 KT, 3 KM, 2 Carport)',
+      'Classic Tudor Architectural Accents & Gable Rooflines',
+      'Direct Access to Lake Vista Promenade & Jogging Track',
+      'Smart Home System & Private Garden'
+    ],
+    description: 'Lake Vista Tudor mengusung arsitektur klasik modern bergaya Inggris dengan sentuhan elegan di tepi danau. Menawarkan kenyamanan ruang keluarga terbuka dan pemandangan hijau yang menenangkan.',
+    badges: ['Lake Vista', 'Tudor Type', 'Waterfront']
+  },
+  {
+    id: 'lakevista-portico',
+    title: 'Lake Vista Portico Type',
+    category: 'LAKE VISTA',
+    location: 'Cluster Lake Vista, SHILA SAWANGAN, Depok',
+    price: 'Mulai Rp 4.200.000.000',
+    priceNumeric: 4200000000,
+    bedrooms: 4,
     bathrooms: 4,
     floors: 2,
+    sqft: 198,
+    yearBuilt: 2024,
+    image: '/images/lake-vista/portico/1.jpg',
+    images: [
+      '/images/lake-vista/portico/1.jpg',
+      '/images/lake-vista/2.jpg',
+      '/images/lake-vista/3.jpg'
+    ],
+    features: [
+      'Portico Type (LB 198m² - 4 KT, 4 KM, 2 Carport)',
+      'Grand Entrance Portico & High Ceiling Living Room',
+      'Private Balcony Overlooking Lake Vista Waterbody',
+      'Premium Marble Flooring & Sanitary Fixtures'
+    ],
+    description: 'Lake Vista Portico menghadirkan fasad megah dengan pilar-pilar elegan dan teras luas. Dirancang khusus bagi Anda yang mendambakan kemewahan hunian tepi danau dengan sirkulasi udara optimal.',
+    badges: ['Lake Vista', 'Portico Type', 'Luxury Choice']
+  },
+  {
+    id: 'lakevista-pavilion',
+    title: 'Lake Vista Pavilion Type',
+    category: 'LAKE VISTA',
+    location: 'Cluster Lake Vista, SHILA SAWANGAN, Depok',
+    price: 'Mulai Rp 4.900.000.000',
+    priceNumeric: 4900000000,
+    bedrooms: 5,
+    bathrooms: 5,
+    floors: 3,
     sqft: 250,
     yearBuilt: 2024,
-    // Foto Utama: '/images/lake-vista/1.jpg' (dengan cadangan online)
-    image: '/images/lake-vista/1.jpg',
-    // Galeri Foto Lake Vista (1.jpg, 2.jpg, 3.jpg, 4.jpg)
+    image: '/images/lake-vista/pavilion/1.jpg',
     images: [
-      '/images/lake-vista/1.jpg',
-      '/images/lake-vista/2.jpg',
+      '/images/lake-vista/pavilion/1.jpg',
       '/images/lake-vista/3.jpg',
       '/images/lake-vista/4.jpg'
     ],
-    description: 'Mahakarya arsitektur mewah dengan pemandangan danau yang memukau di cluster Lake Vista. Dilengkapi infinity deck, master suite balkon privat menghadap danau, serta material marmer premium.',
-    badges: ['Luxury Choice', 'Lake Vista']
+    features: [
+      'Pavilion Type (LB 250m² - 5 KT, 5 KM, 2-3 Carport)',
+      'Exclusive 3-Story Waterfront Living with Rooftop Terrace',
+      'Private Dock Access & Panoramic Lake View',
+      'Master Suite with Walk-In Closet & En-Suite Spa Bathroom'
+    ],
+    description: 'Lake Vista Pavilion adalah tipe hunian tertinggi dan paling prestisius di cluster Lake Vista. Menawarkan 3 lantai kemewahan dengan rooftop deck pribadi untuk menikmati panorama danau secara langsung.',
+    badges: ['Lake Vista', 'Pavilion Type', 'Signature Collection']
   }
 ];
