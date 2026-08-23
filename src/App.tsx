@@ -248,9 +248,9 @@ export default function App() {
           <div className="flex items-center gap-2.5 sm:gap-3">
             <a 
               id="instagram-header-btn"
-              href="https://www.instagram.com/puriastergdc.ratna?utm_source=qr&igsi=eG11MjNjMGt1aW5l"
-              target="_blank"
-              rel="noopener noreferrer"
+             href="https://www.instagram.com/na__propertyconsultantshila?utm_source=qr&igsi=eG11MjNjMGt1aW5l"
+  target="_blank"
+  rel="noopener noreferrer"
               className="p-2 sm:p-2.5 rounded-full border border-gray-200 hover:border-[#E1306C] text-gray-700 hover:text-[#E1306C] bg-white hover:bg-pink-50/50 shadow-2xs transition-all duration-200 flex items-center justify-center cursor-pointer group"
               title="Kunjungi Instagram Kami"
               aria-label="Instagram Puri Aster GDC Ratna"
@@ -1067,9 +1067,9 @@ export default function App() {
               <a className="font-navigation text-[11px] uppercase hover:text-[#965F0E] transition-colors tracking-widest font-bold text-gray-300" href="#contact">CONTACT</a>
               <a 
                 className="font-navigation text-[11px] uppercase hover:text-[#E1306C] transition-colors tracking-widest font-bold text-gray-300 flex items-center gap-1.5" 
-                href="https://www.instagram.com/puriastergdc.ratna?utm_source=qr&igsi=eG11MjNjMGt1aW5l"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.instagram.com/na__propertyconsultantshila?utm_source=qr&igsi=eG11MjNjMGt1aW5l"
+  target="_blank"
+  rel="noopener noreferrer"
               >
                 <Instagram className="w-3.5 h-3.5" />
                 INSTAGRAM
