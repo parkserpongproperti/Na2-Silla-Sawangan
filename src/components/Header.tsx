@@ -17,7 +17,7 @@ export default function Header({ favoritesCount }: HeaderProps) {
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-[#0E1726] text-[#B37B24] flex items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md overflow-hidden relative">
             <img 
-              src="/images/Logo/logo.png" 
+              src="/images/logo/logo.png" 
               alt="Shila Sawangan Logo" 
               className="w-full h-full object-contain p-1"
               onError={(e) => {
