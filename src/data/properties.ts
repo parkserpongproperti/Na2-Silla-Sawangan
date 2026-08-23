@@ -30,13 +30,11 @@ export const PROPERTIES: Property[] = [
     title: 'The Forest SHILA SAWANGAN',
     category: 'THE FOREST',
     location: 'Cluster The Forest, SHILA SAWANGAN, Depok',
-    price: 'Mulai Rp 2.800.000.000',
-    priceNumeric: 2800000000,
+    price: 'Mulai Rp 2.995.000.000',
+    priceNumeric: 2995000000,
     bedrooms: 4,
     bathrooms: 3,
     floors: 2,
-    sqft: 149,
-    yearBuilt: 2024,
     // Foto Utama (1.jpg)
     image: '/images/the-forest/1.jpg',
     // Galeri Lengkap The Forest (1.jpg sampai 8.jpg)
@@ -46,22 +44,10 @@ export const PROPERTIES: Property[] = [
       '/images/the-forest/3.jpg', // 3.jpg: Fasilitas Creek & Boardwalk
       '/images/the-forest/4.jpg', // 4.jpg: Tipe PV (149m²)
       '/images/the-forest/5.jpg', // 5.jpg: Tipe PC (184m²)
-      '/images/the-forest/6.jpg', // 6.jpg: Tipe LM (222m²)
-      '/images/the-forest/7.jpg', // 7.jpg: Denah / Siteplan
-      '/images/the-forest/8.jpg'  // 8.jpg: Peta Akses Tol
-    ],
-    features: [
-      'PV Type (LB 149m² - 4 KT, 3 KM, 2 Carport)',
-      'PC Type (LB 184m² - 4 KT, 4 KM, 2 Carport)',
-      'LM Type (LB 222m² - 4+1 KT, 4+1+1 KM, 2 Carport)',
-      'The Gateway to Your Creation (Grand Iconic Gate)',
-      'Creek Side Living, Kayaking & Sunken Deck Promenade',
-      'Exclusive Facilities: Outdoor Gym, Basketball Court, Playground, Yoga Area, Edible Garden',
-      'Lake Series: Picnic Lawn, Herbs Garden, Sunbathing Deck, Boat Dock & Seating Pavilion',
-      'Akses Strategis: 25 Menit Serpong/Alam Sutera, 30 Menit Jakarta Selatan, 35 Menit Bandara Soekarno-Hatta'
+     
     ],
     description: 'The Forest SHILA SAWANGAN mengusung konsep hunian "The Gateway to Your Creation" dan "Creek Side Living". Menghadirkan 3 tipe unit prestisius (PV Type 149m², PC Type 184m², LM Type 222m²), kawasan asri dengan aliran sungai alami, private boardwalk, serta fasilitas rekreasi dan olahraga eksklusif.',
-    badges: ['Featured', 'The Forest', 'Creek Side Living', '3 Unit Types']
+    badges: ['Featured', 'The Forest', '3 Unit Types']
   },
 
   // ---------------------------------------------------------------------
@@ -72,13 +58,11 @@ export const PROPERTIES: Property[] = [
     title: 'South Bank Premium Residence',
     category: 'SOUTH BANK',
     location: 'Cluster South Bank, SHILA SAWANGAN, Depok',
-    price: 'Rp 3.500.000.000',
-    priceNumeric: 3500000000,
+    price: 'Rp 3.737.000.000',
+    priceNumeric: 3737000000,
     bedrooms: 4,
     bathrooms: 3,
     floors: 2,
-    sqft: 180,
-    yearBuilt: 2024,
     // Foto Utama: '/images/south-bank/1.jpg' (dengan cadangan online)
     image: '/images/south-bank/1.jpg',
     // Galeri Foto South Bank (1.jpg, 2.jpg, 3.jpg, 4.jpg)
@@ -110,15 +94,13 @@ export const PROPERTIES: Property[] = [
     image: '/images/lake-vista/tudor/1.jpg',
     images: [
       '/images/lake-vista/tudor/1.jpg',
-      '/images/lake-vista/1.jpg',
-      '/images/lake-vista/2.jpg'
+      '/images/lake-vista/tudor/2.jpg',
+      '/images/lake-vista/tudor/3.jpg'
+      '/images/lake-vista/tudor/4.jpg'
+      '/images/lake-vista/tudor/5.jpg'
+      '/images/lake-vista/tudor/6.jpg'
     ],
-    features: [
-      'Tudor Type (LB 165m² - 4 KT, 3 KM, 2 Carport)',
-      'Classic Tudor Architectural Accents & Gable Rooflines',
-      'Direct Access to Lake Vista Promenade & Jogging Track',
-      'Smart Home System & Private Garden'
-    ],
+    
     description: 'Lake Vista Tudor mengusung arsitektur klasik modern bergaya Inggris dengan sentuhan elegan di tepi danau. Menawarkan kenyamanan ruang keluarga terbuka dan pemandangan hijau yang menenangkan.',
     badges: ['Lake Vista', 'Tudor Type', 'Waterfront']
   },
