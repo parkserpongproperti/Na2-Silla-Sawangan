@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Landmark } from 'lucide-react';
-
+ 
 export default function Footer() {
   return (
     <footer className="bg-[#0E1726] text-white py-16 border-t border-white/5">
