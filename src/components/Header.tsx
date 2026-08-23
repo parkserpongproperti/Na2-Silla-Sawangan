@@ -25,6 +25,7 @@ export default function Header({ favoritesCount }: HeaderProps) {
   <div className="logo-fallback hidden w-full h-full items-center justify-center">
     <Landmark className="w-5 h-5" />
   </div>
+       </div>
             <h1 className="text-base sm:text-lg font-extrabold text-[#0E1726] tracking-widest uppercase">
               Homeland
             </h1>
