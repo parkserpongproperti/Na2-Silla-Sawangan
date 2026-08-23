@@ -121,7 +121,7 @@ export default function App() {
     e.preventDefault();
     if (!contactName || !contactPhone) return;
     const text = encodeURIComponent(`Halo Kak Ratna, saya ${contactName} (No. Telp/WA: ${contactPhone}). ${contactMsg ? `Pesan: ${contactMsg}` : 'Mohon informasi lebih lanjut mengenai properti di SHILA SAWANGAN.'}`);
-    window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
+    window.open(`https://wa.me6281280055490/?text=${text}`, '_blank');
     setContactSubmitted(true);
     setTimeout(() => {
       setContactSubmitted(false);
@@ -1004,7 +1004,7 @@ export default function App() {
                               <button 
                                 onClick={() => {
                                   const text = encodeURIComponent(`Halo SHILA SAWANGAN, saya tertarik dengan properti "${property.title}" (${property.price}) di ${property.location}. Mohon informasi lebih lanjut.`);
-                                  window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
+                                  window.open(`https://wa.me/6281280055490?text=${text}`, '_blank');
                                 }}
                                 className="w-9 h-9 flex items-center justify-center text-[#25D366] hover:scale-110 transition-all cursor-pointer border-none bg-transparent"
                                 title="WhatsApp Agent"
@@ -1362,7 +1362,7 @@ export default function App() {
                 <button 
                   onClick={() => {
                     const text = encodeURIComponent(`Halo Kak Na², saya tertarik dengan properti "${selectedProperty.title}" (${selectedProperty.price}) di ${selectedProperty.location}. Mohon informasi lebih lanjut.`);
-                    window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
+                    window.open(`https://wa.me/6281280055490?text=${text}`, '_blank');
                   }}
                   className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white py-3 px-6 rounded-lg flex items-center justify-center gap-2.5 text-xs font-extrabold uppercase tracking-widest transition-all cursor-pointer shadow-md hover:scale-[1.01] duration-150 border-none"
                 >
@@ -1395,7 +1395,7 @@ export default function App() {
         <button
           onClick={() => {
             const text = encodeURIComponent("Halo Kak Na², saya tertarik ingin mendapatkan informasi lengkap dan penawaran terbaik mengenai properti di SHILA SAWANGAN. Mohon bantuannya.");
-            window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
+            window.open(`https://wa.me/6281280055490?text=${text}`, '_blank');
           }}
           className="w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-200 cursor-pointer relative group-hover:rotate-6"
           aria-label="Chat WhatsApp Kak Na2"
