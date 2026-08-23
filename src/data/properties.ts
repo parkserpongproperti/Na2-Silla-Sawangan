@@ -61,7 +61,7 @@ export const PROPERTIES: Property[] = [
     title: 'South Bank Premium Residence',
     category: 'SOUTH BANK',
     location: 'Cluster South Bank, SHILA SAWANGAN, Depok',
-    price: 'Rp 2.990.000.000',
+    price: ' Mulai Rp 2.990.000.000',
     priceNumeric: 2990000000,
     bedrooms: 4,
     bathrooms: 3,
@@ -102,12 +102,7 @@ export const PROPERTIES: Property[] = [
       '/images/lake-vista/1.jpg',
       '/images/lake-vista/2.jpg'
     ],
-    features: [
-      'Tudor Type (LB 165m² - 4 KT, 3 KM, 2 Carport)',
-      'Classic Tudor Architectural Accents & Gable Rooflines',
-      'Direct Access to Lake Vista Promenade & Jogging Track',
-      'Smart Home System & Private Garden'
-    ],
+    
     description: 'Lake Vista Tudor mengusung arsitektur klasik modern bergaya Inggris dengan sentuhan elegan di tepi danau. Menawarkan kenyamanan ruang keluarga terbuka dan pemandangan hijau yang menenangkan.',
     badges: ['Lake Vista', 'Tudor Type', 'Waterfront']
   },
@@ -129,12 +124,7 @@ export const PROPERTIES: Property[] = [
       '/images/lake-vista/2.jpg',
       '/images/lake-vista/3.jpg'
     ],
-    features: [
-      'Portico Type (LB 198m² - 4 KT, 4 KM, 2 Carport)',
-      'Grand Entrance Portico & High Ceiling Living Room',
-      'Private Balcony Overlooking Lake Vista Waterbody',
-      'Premium Marble Flooring & Sanitary Fixtures'
-    ],
+   
     description: 'Lake Vista Portico menghadirkan fasad megah dengan pilar-pilar elegan dan teras luas. Dirancang khusus bagi Anda yang mendambakan kemewahan hunian tepi danau dengan sirkulasi udara optimal.',
     badges: ['Lake Vista', 'Portico Type', 'Luxury Choice']
   },
@@ -147,7 +137,7 @@ export const PROPERTIES: Property[] = [
     priceNumeric: 2357000000,
     bedrooms: 4,
     bathrooms: 3,
-    floors: 3,
+    floors: 2,
     sqft: 250,
     yearBuilt: 2024,
     image: '/images/lake-vista/pavilion/1.jpg',
@@ -157,7 +147,7 @@ export const PROPERTIES: Property[] = [
       '/images/lake-vista/4.jpg'
     ],
     
-    description: 'Lake Vista Pavilion adalah tipe hunian tertinggi dan paling prestisius di cluster Lake Vista. Menawarkan 3 lantai kemewahan dengan rooftop deck pribadi untuk menikmati panorama danau secara langsung.',
+    description: 'Lake Vista Pavilion adalah tipe hunian tertinggi dan paling prestisius di cluster Lake Vista. Menawarkan 2 lantai kemewahan dengan balkon deck pribadi untuk menikmati panorama danau secara langsung.',
     badges: ['Lake Vista', 'Pavilion Type', 'Signature Collection']
   }
 ];
